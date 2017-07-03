@@ -14,7 +14,7 @@ type Machine struct {
 // NOTE: *Machine fully implements the "Generator" interface
 func (m *Machine) GenerateElectricity() bool {
 	if m.weight > 10 {
-		fmt.Println("I am generatring electricity.")
+		fmt.Println("I am generating electricity.")
 		return true
 	}
 	fmt.Println("I do not weigh enough to generate electricity.")
@@ -55,7 +55,7 @@ func main() {
 	bigMachine, smallMachine := &Machine{25}, &Machine{4} // create a big and small *Machine
 	var bigGenerator, smallGenerator Generator
 
-	// these WORKS because "Machine" fully implements the "Generator" interface
+	// these WORK because "Machine" fully implements the "Generator" interface
 	bigGenerator = bigMachine
 	smallGenerator = smallMachine
 
